@@ -1,0 +1,108 @@
+> var carro = {
+... marca: 'Fiat',
+... modelo: 'Palio',
+... placa: 'ABC-2345',
+... ano: 2013,
+... cor: 'amarelo',
+... quantasPartas: 4,
+... assentos: 5,
+... quantidadePessoas: 0
+... };
+undefined
+> carro
+{
+  marca: 'Fiat',
+  modelo: 'Palio',
+  placa: 'ABC-2345',
+  ano: 2013,
+  cor: 'amarelo',
+  quantasPartas: 4,
+  assentos: 5,
+  quantidadePessoas: 0
+}
+> carro.mudarCor = function( cor ) {
+... carro.cor = cor;
+... };
+[Function (anonymous)]
+> carro.obterCor = function() {
+... return carro.cor;
+... };
+[Function (anonymous)]
+> carro.obterModelo = function() {};
+[Function (anonymous)]
+> carro.adicionarPessoas = function( numeroPessoas ) {
+... return 'já temos ' + carro.quantidadesPessoas + ' pessoas no carro!';
+... };
+[Function (anonymous)]
+> carro.adicionarPessoas(2);
+'já temos undefined pessoas no carro!'
+> carro.adicionarPessoas = 0;
+0
+> carro.adicionarPessoas( 2);
+Uncaught TypeError: carro.adicionarPessoas is not a function
+> function myFunction() {
+... return 1;
+... }
+undefined
+> myFunction()
+1
+> function myFunction() {
+... return 'string';
+... }
+undefined
+> myFunction()
+'string'
+> function myFunction() {
+... return true;
+... }
+> function myFunction() {
+... return {
+..... prop1: 1,
+..... prop2: 'Jeferson',
+..... prop3: function() {
+....... return 'prop3';
+....... }
+..... }
+... };
+undefined
+> myFunction()
+{ prop1: 1, prop2: 'Jeferson', prop3: [Function: prop3] }
+> myFunction().prop1
+1
+> var values = myFunction();
+undefined
+> values
+{ prop1: 1, prop2: 'Jeferson', prop3: [Function: prop3] }
+> values.prop2
+'Jeferson'
+> values.prop3
+[Function: prop3]
+> values.prop3();
+'prop3'
+> var arr = [1, 2, 3];
+undefined
+> function myFunction() {
+... function myFunction(arr) {
+..... function myFunction(arg) {
+....... return arg;
+....... }
+..... }
+... };
+undefined
+> myFunction()
+undefined
+> myFunction(arr);
+undefined
+> var obj = {
+... propriedade: 'jeferson',
+... curso: 'Javascript Ninja',
+... ninja: true
+... }
+undefined
+> obj
+{ propriedade: 'jeferson', curso: 'Javascript Ninja', ninja: true }
+> myFunction(1)
+undefined
+> myFunction(1);
+undefined
+>
